@@ -1,21 +1,19 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Booking from './pages/Booking';
+import Confirmation from './pages/Confirmation';
 import './App.css';
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Highlight from "./components/Highlight";
-import Testimonial from "./components/Testimonial";
-import About from "./components/About";
-import Footer from "./components/Footer";
 
 function App() {
   return (
-    <main>
-      <Nav />
-      <Hero />
-      <Highlight />
-      <Testimonial />
-      <About />
-      <Footer />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
