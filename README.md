@@ -3,13 +3,7 @@
 <h2 align="center">A Front-end Restaurant Booking System Project.</h2>
 
 <br />
-<p align="center">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="Reactjs" />
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript" />
-    <img src="https://img.shields.io/badge/React Responsive Carousel-FFFFFF?style=for-the-badge&logo=react-responsive-carousel&logoColor=000000" alt="React Responsive Carousel" />
-</p>
+
   
   <h3 align="center"><a href="https://little-lemon-restaurant-sumit-sharma-02.vercel.app/"><strong>« Try the demo here »</strong></a></h3>
 
@@ -46,27 +40,18 @@
 
 ## Quick Start
 
-```shell
-$ git clone https://github.com/sumit-sharma-02/little-lemon-restaurant.git
-$ cd little-lemon-restaurant
+$ git clone https://github.com/Mygaverse/Little-Lemon-Booking-App.git
+$ cd little-lemon-booking-app
 $ npm install
 ```
 
 ### Launch the app
 
-Use the following command to run the app in your localhost.
+Use the "npm start" to run the app in your localhost.
 
-```
-npm start
-```
 
 ## Contact
 
-If you want to contact me, you can reach me through below handles.
+If you want to contact me, you can reach me through Github account.
 
-[![linkedin](https://img.shields.io/badge/Sumit_Sharma-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumitsharma002/)
-[![Github](https://img.shields.io/badge/Sumit_Sharma-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/sumit-sharma-02/)
 
-## Show your support
-
-Give it a ⭐️ if you like it.

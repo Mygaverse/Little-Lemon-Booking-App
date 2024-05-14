@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .mobile-nav {
     display: none;
 }
@@ -7,7 +6,7 @@
 @media screen and (max-width: 1024px) {
 
     .mobile-nav {
-        display: flex;        
+        display: flex;
     }
 
     .mobile-nav ul li a {
@@ -18,25 +17,4 @@
     .mobile-nav ul li .active-links.active {
         color: #495e57
     }
-=======
-.mobile-nav {
-    display: none;
-}
-
-
-@media screen and (max-width: 1024px) {
-
-    .mobile-nav {
-        display: flex;        
-    }
-
-    .mobile-nav ul li a {
-        font-size: smaller;
-        font-weight: 500;
-    }
-
-    .mobile-nav ul li .active-links.active {
-        color: #495e57
-    }
->>>>>>> 2d879678 (updating new file structure)
 }
