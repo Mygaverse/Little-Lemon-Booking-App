@@ -1,6 +1,6 @@
-<h1 align="center">Little Lemon Restaurant</h1>
+<h1 align="center">Little Lemon Booking App</h1>
 
-<h2 align="center">A Front-end Restaurant App.</h2>
+<h2 align="center">A Front-end Restaurant Booking System Project.</h2>
 
 <br />
 <p align="center">
@@ -10,13 +10,6 @@
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript" />
     <img src="https://img.shields.io/badge/React Responsive Carousel-FFFFFF?style=for-the-badge&logo=react-responsive-carousel&logoColor=000000" alt="React Responsive Carousel" />
 </p>
-
-<p align="center"> 
-    <br />&#10023;
-    <a href="#Quick-Start">Quick Start</a>   &#10023;    
-    <a href="https://github.com/sumit-sharma-02/little-lemon-restaurant/issues">Report Bug</a>   &#10023;
-    <a href="#Contact">Author</a>&#10023;
-  </p>
   
   <h3 align="center"><a href="https://little-lemon-restaurant-sumit-sharma-02.vercel.app/"><strong>« Try the demo here »</strong></a></h3>
 
