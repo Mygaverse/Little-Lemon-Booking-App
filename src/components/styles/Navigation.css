@@ -12,10 +12,12 @@
 }
 
 .navigation ul li a:hover {
+    text-decoration: underline;
     color: #495e57;
 }
 
 .navigation ul li .active-links.active {
+    text-decoration: underline;
     color: #495e57
 }
 

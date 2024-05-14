@@ -15,6 +15,7 @@
     }
 
     .mobile-nav ul li .active-links.active {
+        text-decoration: underline;
         color: #495e57
     }
 }

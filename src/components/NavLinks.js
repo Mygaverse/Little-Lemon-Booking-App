@@ -8,14 +8,7 @@ const NavLinks = (props) => {
   const animateTo = {opacity: 1, y: 0}
   return (
     <motion.ul className="menu-items" initial={animateFrom} animate={animateTo} transition={{delay: 0.05}}>
-            <motion.li
-              initial={animateFrom}
-              animate={animateTo}
-              transition={{delay: 0.05}}
-              onClick={() => props.isMobile && props.closeMobileMenu()}
-              >
-                <NavLink to="/" className="active-links">Home</NavLink>
-              </motion.li>
+            
             <motion.li
             initial={animateFrom}
             animate={animateTo}
@@ -63,7 +56,7 @@ const NavLinks = (props) => {
             onClick={() => props.isMobile && props.closeMobileMenu()}
             className="donate"
             >
-              <NavLink to="#">Donate</NavLink>
+              <NavLink to="#">Sign Up</NavLink>
             </motion.li>
         </motion.ul>
   )

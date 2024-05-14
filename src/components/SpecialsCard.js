@@ -39,14 +39,14 @@ const SpecialsCard = () => {
             const order = menu.order;
             
             return (
-                <div>
+                <section>
                     <div className="special-card-container">
                         <div className="image-container">
                                 <img src={image} alt="Special Item" />
                             </div>
                         <div className="special-card-text">
                             <div className="special-card-title">
-                                <h3>{title}</h3>
+                                <h2>{title}</h2>
                                 <h3 className="price-tag">{price}</h3>
                             </div>
                             <p>{description}</p>
@@ -57,8 +57,11 @@ const SpecialsCard = () => {
                                 </h4>
                             </NavLink>
                         </div>
+                        <div>
+                            
+                        </div>
                     </div>
-                </div>
+                </section>
             )
     })
 
