@@ -40,7 +40,7 @@ function Form() {
                 </div>
                 <div className="field">
                     <label htmlFor="telephone">Telephone</label>
-                    <input type="tel" placeholder="233 00 000 0000" name="telephone" {...register("telephone")}/>
+                    <input type="tel" placeholder="773-456-7890" name="telephone" {...register("telephone")}/>
                     <span className="error-message">{errors.telephone?.message}</span>
                 </div>
 

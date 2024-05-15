@@ -1,9 +1,9 @@
 import React from 'react'
 import "../components/styles/TestimonialsCard.css"
-import User1 from "../components/assets/salad.jpg"
-import User2 from "../components/assets/bruschetta1.jpg"
-import User3 from "../components/assets/creme.jpg"
-import User4 from "../components/assets/creme.jpg"
+import User1 from "../components/assets/user1.png"
+import User2 from "../components/assets/user2.png"
+import User3 from "../components/assets/user3.png"
+import User4 from "../components/assets/user4.png"
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 
@@ -11,25 +11,25 @@ const TestimonialsCard = () => {
     const userFeedbacks = [
         {   
             image: User1,
-            name: "Nicolas Cage",
+            name: "Nicolas Case",
             rating: "8.5/10",
             description: "This is the best Mediterranean food that I've ever had!",
         },
         {
             image: User2,
-            name: "Lucy Liu",
+            name: "Jessica Alta",
             rating: "9.0/10",
             description: "I really loved the cozy vibes and delicious food here.",
         },
         {
             image: User3,
-            name: "Tom Hanks",
+            name: "Christian Wale",
             rating: "9.5/10",
             description: "I've had some great Mediterranean food before, but none of them beats Little Lemon in flavor and texture.",
         },
         {
             image: User4,
-            name: "Christian Bale",
+            name: "Lucy Liu",
             rating: "9.0/10",
             description: "Great food, welcoming staff, cozy atmosphere. A great place to treat your kids to.",
         }

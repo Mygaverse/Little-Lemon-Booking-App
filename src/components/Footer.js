@@ -1,44 +1,53 @@
 import React from 'react';
+import logo from '../components/assets/favilogo.png';
+import { Link } from 'react-router-dom';
 import "../components/styles/Footer.css";
 
 const Footer = () => {
   return (
-    <div>
-        <div className="footer-background">
+    <footer>
+        
             <div className="footer-container">
                 <div className="footer-content">
-                    <div className="locations">
-                        <h5>LOCATIONS</h5>
-                        <ul>
-                            <li>Accra</li>
-                            <li>Kumasi</li>
-                            <li>Cape Coast</li>
-                            <li>Tamale</li>
+                    <figure>
+                        <img src={logo} alt="footer logo"></img>
+                    </figure>
+                    <article>
+                        <h5>Quick Links</h5>
+                        <ul className='footer-links'>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="#">About</Link></li>
+                            <li><Link to="#">Menu</Link></li>
+                            <li><Link to="/reservations">Reservations</Link></li>
+                            <li><Link to="#">Order Online</Link></li>
+                            <li><Link to="#">Login</Link></li>
+                            <li><Link to="#">Sign Up</Link></li>
                         </ul>
-                    </div>
-                    <div className="opening-times">
-                        <h5>OPENING TIMES</h5>
+                    </article>
+                    <article>
+                        <h5>Contact</h5>
                         <ul>
-                            <li>Mon - Wed: 10:30AM - 12:00AM</li>
-                            <li>Fri: 12:00PM - 1:00AM</li>
-                            <li>Sat - Sun: 10:30AM - 12:00AM</li>
-                        </ul>
-                    </div>
-                    <div className="contact">
-                        <h5>CONTACT US</h5>
-                        <ul>
-                            <li>96 Abafom Road, North Ridge - Accra</li>
-                            <li>Tel: 020 7928 0678</li>
+                            <li>2148 W Chicago Ave, Chicago, IL</li>
+                            <li>Tel: +17732767567</li>
                             <li>Email: info@littlelemon.com</li>
                         </ul>
-                    </div>
+                    </article>
+                    <article>
+                        <h5>Social Media</h5>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>Twitter</li>
+                        </ul>
+                    </article>
+                    
             </div>
             <div className="copyright">
                 <p>© 2023 Little Lemon Ltd. All rights reserved.</p>
             </div>
         </div>
-        </div>
-    </div>
+        
+    </footer>
   )
 }
 

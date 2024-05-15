@@ -36,7 +36,6 @@
 .testimonial-card-quote p {
     font-size: 12pt;
     line-height: 1.2;
-    
     text-align: center;
 }
 
@@ -46,6 +45,10 @@
     height: 3rem;
     object-fit: cover;
     border-radius: 30px;
+}
+
+.testimonial-card-user h3 {
+    font-size: 14pt;
 }
 
 

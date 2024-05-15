@@ -16,8 +16,6 @@
     padding: 100px 100px;
 }
 
-
-
 .about-left h1, h2 {
     line-height: 0.8;
 }
@@ -49,7 +47,7 @@
 }
 
 .about-right {
-    width: 50%;
+    width: 40%;
     
 }
 
@@ -73,20 +71,6 @@
 
 
 @media screen and (max-width: 1024px) {
-    .about-background {
-        padding-top: 10vh;
-    }
-
-    .image-box {
-        right: 0;
-        width: 300px;
-        height: 370px;
-    }
-
-    .about-container {
-        width: 100%;
-        padding: 30px;
-    }
 
     .about-left h1 {
         font-size: 50px;
@@ -95,6 +79,7 @@
       h2 {
         font-size: 34px;
       }
+
 }
 
 
@@ -111,15 +96,17 @@
         position: initial
     }
 
+    .about-left {
+        width: 100%;
+        padding: 30px;
+    }
+
     .about-left p {
         width: 100%;
         font-size: smaller
     }
 
     .about-right {
-        position: initial;
-        margin-top: 30px;
-        margin-bottom: -100px;
         width: 100%;
     }
 

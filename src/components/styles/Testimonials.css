@@ -39,8 +39,14 @@
 
 @media screen and (max-width: 659px) {
     .testimonials-title {
+        padding-top: 50px;
         flex-direction: column;
-        align-items:flex-start;
+        align-items:center;
+    }
+
+    .testimonials-title p {
+        text-align:  center;
+        font-size: 14pt;
     }
 
 }
