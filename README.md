@@ -4,15 +4,10 @@
 
 <br />
 
-  
-  <h3 align="center"><a href="https://little-lemon-restaurant-sumit-sharma-02.vercel.app/"><strong>« Try the demo here »</strong></a></h3>
-
   <p align="center"> 
     Little Lemon Restaurant, a family run Mediterranean restaurant located in Chicago, Illinois. Please come and enjoy our wide selection of authentic Mediterranean cuisine!
   </p>
-  
-  ![little-lemon-restaurant-mockup](https://user-images.githubusercontent.com/52236473/221524124-f2ba25d6-4dd9-442f-9405-70f6a55da839.png)
-  
+
 <br />
 
 ## Pages
