@@ -4,10 +4,10 @@
 
 <br />
 
-  <p align="center"> 
+  <p align="center">
     Little Lemon Restaurant, a family run Mediterranean restaurant located in Chicago, Illinois. Please come and enjoy our wide selection of authentic Mediterranean cuisine!
   </p>
-git
+
 <br />
 
 ## Pages
@@ -24,12 +24,13 @@ git
 
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/52236473/221521518-95e917a5-aa55-44b9-92c3-6196b1298754.png" alt="home-page-1" /></td>
-    <td><img src="https://user-images.githubusercontent.com/52236473/221521710-9db219e2-5baa-49ff-8f20-cbee0480e9a4.png" alt="home-page-2" /></td>
+    <td><img src="/src/components/assets/screenshot-of-home-01.jpg" alt="home-page-1" /></td>
+    <td><img src="/src/components/assets/screenshot-of-home-02.jpg" alt="home-page-2" /></td>
+    <td><img src="/src/components/assets/screenshot-of-home-03.jpg" alt="home-page-3" /></td>
   </tr>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/52236473/221522208-82114c4a-4993-4edf-83b9-05eb6b995407.png" alt="reservation-1" /></td>
-    <td><img src="https://user-images.githubusercontent.com/52236473/221522269-f805ba25-cca3-4ff6-9e9b-724e2b9b6725.png" alt="reservation-2" /></td>
+    <td><img src="/src/components/assets/screenshot-of-booking-form.jpg" alt="reservation-form" /></td>
+    <td><img src="/src/components/assets/screenshot-of-confirmation.jpg" alt="reservation-confirm" /></td>
   </tr>
 </table>
 
