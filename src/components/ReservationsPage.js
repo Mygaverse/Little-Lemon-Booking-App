@@ -1,8 +1,17 @@
 import React from 'react';
+import { useReducer } from "react";
 import "./styles/ReservationsContent.css";
 import Form from './Form';
+import { fetchAPI } from '../bookingsAPI';
 
 function ReservationsPage() {
+
+  function updateTimes(date) {
+    return fetchAPI(date);
+  };
+  const output = fetchAPI(new Date());
+
+  const [availableTimes, dispatch] = useReducer(updateTimes, output);
 
   return (
     <div className="res-content-wrapper">
@@ -15,11 +24,11 @@ function ReservationsPage() {
             <div className="form">
                 <h1>Reserve a Table</h1>
                 <p>Please fill in and submit form to book your reservation at Little Lemon.</p>
-                <Form />
+                <Form availableTimes={availableTimes} updateTimes={dispatch} />
             </div>
         </div>
     </div>
   )
 }
 
-export default ReservationsPage
+export default ReservationsPage;

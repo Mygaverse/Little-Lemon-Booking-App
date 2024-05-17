@@ -1,0 +1,48 @@
+.res-content-wrapper {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.73)), url("../assets/restaurant-interior.png");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.res-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0px auto;
+    padding: 80px 0;
+}
+
+.text {
+    margin-top: 100px;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .res-content-container {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .text {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .text p {
+        margin-bottom: 0;
+    }
+
+    
+}

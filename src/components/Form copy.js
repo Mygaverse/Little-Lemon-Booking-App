@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./styles/ReservationsContent.css";
 import {useForm} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
-import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 const schema = yup.object({
     name: yup.string().required("Full name is a required field!"),
@@ -18,9 +17,6 @@ const schema = yup.object({
 const Form = (props) => {
 
     let formData_ = '';
-
-    const navigate = useNavigate();
-    const [redirectToConfirmation, setRedirectToConfirmation] = useState(false);
 
     const { handleSubmit, register, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
@@ -37,20 +33,7 @@ const Form = (props) => {
         formData_ = payload;
     
         props.submitForm(payload);
-    }
-
-    useEffect(() => {
-        if (props.submitted && Object.keys(errors).length === 0) {
-            setRedirectToConfirmation(true);
-        }
-        }, [props.submitted, errors]);
-
-    useEffect(() => {
-        if (redirectToConfirmation) {
-            navigate('/confirmation'); // Or your confirmation page route
-        }
-        }, [redirectToConfirmation, navigate]);
-
+      }
 
     return (
         <form onSubmit={handleSubmit(submitForm)}>
@@ -72,14 +55,24 @@ const Form = (props) => {
                 </div>
 
                 {/*<div className="guestsdate">*/}
-                
+                <div className="field">
+                    <label htmlFor="occasion">Occasion (optional)</label>
+                    <div className="options">
+                        <select name="occasion" {...register("occasion")}>
+                            <option value="select">Select occasion</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="engagement">Engagement</option>
+                            <option value="anniversary">Anniversary</option>
+                        </select>
+                    </div>
+                </div>
                 <div className="field">
                     <label htmlFor="guests">Number of Guests</label>
                     <input type="number" placeholder="2" name="guests" {...register("guests")}/> 
                     <span className="error-message">{errors.guests?.message}</span>
                 </div>
                 {/*</div>*/}
-
+                        
                 <div className="field">
                     <label htmlFor="date">Select the Date</label>
                     <input type="date" name="date" {...register("date")} />
@@ -95,17 +88,6 @@ const Form = (props) => {
                         </select>
                     </div>
                     <span className="error-message">{errors.time?.message}</span>
-                </div>
-                <div className="field">
-                    <label htmlFor="occasion">Occasion (optional)</label>
-                    <div className="options">
-                        <select name="occasion" {...register("occasion")}>
-                            <option value="select">Select occasion</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="engagement">Engagement</option>
-                            <option value="anniversary">Anniversary</option>
-                        </select>
-                    </div>
                 </div>
                 <button className="reserve-btn" type="submit">Reserve</button>
             </fieldset>
