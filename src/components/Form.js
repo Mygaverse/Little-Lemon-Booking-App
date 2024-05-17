@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./styles/ReservationsContent.css";
 import {useForm} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup";
 import { useNavigate } from 'react-router-dom';
+import { submitAPI } from '../bookingsAPI';
 
 
 const schema = yup.object({
@@ -12,45 +13,34 @@ const schema = yup.object({
     telephone: yup.string().required("Telephone is a required field!").matches(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/, "Phone number must match the form (773) 456 7890 or 773 456 7890"),
     guests: yup.number().min(1, "There must be at least 1 guest!").required("Please specify number of guests per table!"),
     date: yup.string().required("Please select date!"),
-    time: yup.string().required('Please select time!'),
+    time: yup.string().required("Please select time!"),
 })
 
 const Form = (props) => {
 
-    let formData_ = '';
-
     const navigate = useNavigate();
-    const [redirectToConfirmation, setRedirectToConfirmation] = useState(false);
 
     const { handleSubmit, register, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
-    })
+    });
 
-    console.log(errors)
+    const submitForm = async (data) => {
+        try {
+            // 1. Perform form submission logic (e.g., send data to API)
+          const isSubmitted = await submitAPI(data); // Your submission function
 
-    const submitForm = (e) => {
-        e.preventDefault();
-    
-        const formData = new FormData(e.target);
-        const payload = Object.fromEntries(formData);
-    
-        formData_ = payload;
-    
-        props.submitForm(payload);
-    }
-
-    useEffect(() => {
-        if (props.submitted && Object.keys(errors).length === 0) {
-            setRedirectToConfirmation(true);
+          if (isSubmitted) {
+            // 2. Redirect on successful submission
+            navigate("/confirmation");
+          } else {
+            // Handle submission failure (e.g., display an error)
+            alert(JSON.stringify(data));
+          }
+        } catch (error) {
+          // Handle errors during submission (e.g., network issues)
+          alert('Something goes wrong!');
         }
-        }, [props.submitted, errors]);
-
-    useEffect(() => {
-        if (redirectToConfirmation) {
-            navigate('/confirmation'); // Or your confirmation page route
-        }
-        }, [redirectToConfirmation, navigate]);
-
+      };
 
     return (
         <form onSubmit={handleSubmit(submitForm)}>
@@ -72,10 +62,10 @@ const Form = (props) => {
                 </div>
 
                 {/*<div className="guestsdate">*/}
-                
+
                 <div className="field">
                     <label htmlFor="guests">Number of Guests</label>
-                    <input type="number" placeholder="2" name="guests" {...register("guests")}/> 
+                    <input type="number" placeholder="2" name="guests" {...register("guests")}/>
                     <span className="error-message">{errors.guests?.message}</span>
                 </div>
                 {/*</div>*/}
@@ -89,6 +79,7 @@ const Form = (props) => {
                     <label htmlFor="time">Select the Time</label>
                     <div className="options">
                         <select name="time" {...register("time")}>
+                            <option selected disabled>Select the Time</option>
                             {props.availableTimes.map((times) =>
                                 <option key={times}>{times}</option>
                             )}
@@ -99,8 +90,8 @@ const Form = (props) => {
                 <div className="field">
                     <label htmlFor="occasion">Occasion (optional)</label>
                     <div className="options">
-                        <select name="occasion" {...register("occasion")}>
-                            <option value="select">Select occasion</option>
+                        <select name="occasion">
+                            <option selected disabled>Select occasion</option>
                             <option value="birthday">Birthday</option>
                             <option value="engagement">Engagement</option>
                             <option value="anniversary">Anniversary</option>
